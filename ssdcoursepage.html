@@ -11,7 +11,6 @@
   <base target="_blank"> -->
   <title>HTML Super Demo — One File to Teach (Almost) Everything</title>
   <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'><rect width='128' height='128' rx='16' fill='%23f5f5f5'/><path d='M32 88l16-64h32l16 64h-16l-4-16H52l-4 16H32zm24-28h16l-8-32-8 32z' fill='%23222'/></svg>">
-  
   <style>
     :root { --bg: #ffffff; --fg: #111827; --muted: #6b7280; --brand: #2563eb; --radius: 12px; }
     @media (prefers-color-scheme: dark) { :root { --bg:#0b0b0f; --fg:#f5f5f5; --muted:#9aa3b2; } }
@@ -47,82 +46,83 @@
     .two-col{columns:280px; column-gap:1rem}
     .two-col > *{break-inside:avoid}
     .demo-iframe{width:100%; aspect-ratio:16/9; border:1px solid #0002; border-radius:12px}
+    
     /* --- NEW CSS ELEMENTS: DARK THEME OVERRIDE --- */
-:root {
-    --bg: #0f1115 !important;
-    --fg: #e2e8f0 !important;
-    --muted: #94a3b8 !important;
-    --brand: #14b8a6 !important; /* Teal accent */
-    --radius: 12px !important;
-}
+    :root {
+        --bg: #0f1115 !important;
+        --fg: #e2e8f0 !important;
+        --muted: #94a3b8 !important;
+        --brand: #14b8a6 !important; /* Teal accent */
+        --radius: 12px !important;
+    }
 
-body {
-    background-color: var(--bg) !important;
-    color: var(--fg) !important;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
-}
+    body {
+        background-color: var(--bg) !important;
+        color: var(--fg) !important;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+    }
 
-header.site {
-    background: rgba(15, 17, 21, 0.9) !important;
-    border-bottom: 1px solid #1e293b !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
-}
+    header.site {
+        background: rgba(15, 17, 21, 0.9) !important;
+        border-bottom: 1px solid #1e293b !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+    }
 
-nav#toc {
-    background-color: #1e293b !important;
-    border: 1px solid #334155 !important;
-    box-shadow: 2px 2px 12px rgba(0,0,0,0.3) !important;
-}
+    nav#toc {
+        background-color: #1e293b !important;
+        border: 1px solid #334155 !important;
+        box-shadow: 2px 2px 12px rgba(0,0,0,0.3) !important;
+    }
 
-nav#toc a:hover {
-    background: rgba(20, 184, 166, 0.1) !important;
-    color: var(--brand) !important;
-    transform: translateX(4px);
-    transition: all 0.2s ease;
-}
+    nav#toc a:hover {
+        background: rgba(20, 184, 166, 0.1) !important;
+        color: var(--brand) !important;
+        transform: translateX(4px);
+        transition: all 0.2s ease;
+    }
 
-section {
-    background-color: #1e293b !important;
-    border: 1px solid #334155 !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
-    transition: transform 0.2s ease-in-out, border-color 0.2s;
-}
+    section {
+        background-color: #1e293b !important;
+        border: 1px solid #334155 !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+        transition: transform 0.2s ease-in-out, border-color 0.2s;
+    }
 
-section:hover {
-    transform: translateY(-2px);
-    border-color: rgba(20, 184, 166, 0.5) !important; /* Glow effect on section hover */
-}
+    section:hover {
+        transform: translateY(-2px);
+        border-color: rgba(20, 184, 166, 0.5) !important; /* Glow effect on section hover */
+    }
 
-a {
-    color: var(--brand) !important;
-    text-decoration: none !important;
-}
+    a {
+        color: var(--brand) !important;
+        text-decoration: none !important;
+    }
 
-a:hover {
-    text-decoration: underline !important;
-    text-shadow: 0 0 8px rgba(20, 184, 166, 0.4);
-}
+    a:hover {
+        text-decoration: underline !important;
+        text-shadow: 0 0 8px rgba(20, 184, 166, 0.4);
+    }
 
-.box, .card, details, dialog {
-    background-color: #0f1115 !important;
-    border-color: #334155 !important;
-}
+    .box, .card, details, dialog {
+        background-color: #0f1115 !important;
+        border-color: #334155 !important;
+    }
 
-table th {
-    background-color: #0f1115 !important;
-    color: var(--brand) !important;
-    border-color: #334155 !important;
-}
+    table th {
+        background-color: #0f1115 !important;
+        color: var(--brand) !important;
+        border-color: #334155 !important;
+    }
 
-table td {
-    border-color: #334155 !important;
-}
+    table td {
+        border-color: #334155 !important;
+    }
 
-.kbd {
-    background: #334155 !important;
-    color: #f8fafc !important;
-    border-color: #0f1115 !important;
-}
+    .kbd {
+        background: #334155 !important;
+        color: #f8fafc !important;
+        border-color: #0f1115 !important;
+    }
   </style>
 </head>
 <body>
