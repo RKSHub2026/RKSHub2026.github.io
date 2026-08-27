@@ -11,7 +11,43 @@
   <base target="_blank"> -->
   <title>HTML Super Demo — One File to Teach (Almost) Everything</title>
   <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'><rect width='128' height='128' rx='16' fill='%23f5f5f5'/><path d='M32 88l16-64h32l16 64h-16l-4-16H52l-4 16H32zm24-28h16l-8-32-8 32z' fill='%23222'/></svg>">
-  </* --- NEW CSS ELEMENTS: DARK THEME OVERRIDE --- */
+  
+  <style>
+    :root { --bg: #ffffff; --fg: #111827; --muted: #6b7280; --brand: #2563eb; --radius: 12px; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#0b0b0f; --fg:#f5f5f5; --muted:#9aa3b2; } }
+    *{box-sizing:border-box}
+    body{margin:0;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg); color:var(--fg)}
+    a{color:var(--brand); text-underline-offset:.2em}
+    header.site{position:sticky;top:0;z-index:10;background:color-mix(in oklab, var(--bg), transparent 0%);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid #0003}
+    header .bar{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;padding:.5rem 1rem}
+    header nav a{margin-right:.75rem}
+    main{display:grid;grid-template-columns:260px 1fr; gap:1rem; padding:1rem}
+    nav#toc{position:sticky; top:3.2rem; align-self:start; max-height:calc(100dvh - 4rem); overflow:auto; border:1px solid #0002; border-radius:var(--radius); padding:.5rem}
+    nav#toc a{display:block;padding:.15rem .35rem;border-radius:8px}
+    nav#toc a:hover{background:#0001}
+    section{border:1px solid #0002; border-radius:var(--radius); padding:1rem; background:color-mix(in srgb, var(--bg), #fff 8%)}
+    h2{margin-top:0}
+    .grid{display:grid; gap:.75rem}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width: 900px){ main{grid-template-columns:1fr} }
+    .box{border:1px dashed #0003; border-radius:10px; padding:.5rem}
+    figure{margin:0}
+    .pill{display:inline-block;padding:.2rem .5rem;border:1px solid #0002;border-radius:999px;background:#fff3}
+    .muted{color:var(--muted)}
+    .kbd{border:1px solid #0003;border-bottom-width:3px;border-radius:6px;padding:.1rem .35rem;background:linear-gradient(#fff,#eee)}
+    .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem}
+    .card{border:1px solid #0002;border-radius:12px;padding:.75rem;background:#fff2}
+    .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+    details{border:1px solid #0002; border-radius:10px; padding:.5rem .8rem; background:#fff2}
+    dialog{border:1px solid #0003;border-radius:12px;padding:1rem}
+    table{width:100%; border-collapse:collapse}
+    th, td{border:1px solid #0002; padding:.4rem .5rem; text-align:left}
+    caption{caption-side:top; font-weight:600; padding:.4rem}
+    .two-col{columns:280px; column-gap:1rem}
+    .two-col > *{break-inside:avoid}
+    .demo-iframe{width:100%; aspect-ratio:16/9; border:1px solid #0002; border-radius:12px}
+    /* --- NEW CSS ELEMENTS: DARK THEME OVERRIDE --- */
 :root {
     --bg: #0f1115 !important;
     --fg: #e2e8f0 !important;
@@ -86,41 +122,7 @@ table td {
     background: #334155 !important;
     color: #f8fafc !important;
     border-color: #0f1115 !important;
-}style>
-    :root { --bg: #ffffff; --fg: #111827; --muted: #6b7280; --brand: #2563eb; --radius: 12px; }
-    @media (prefers-color-scheme: dark) { :root { --bg:#0b0b0f; --fg:#f5f5f5; --muted:#9aa3b2; } }
-    *{box-sizing:border-box}
-    body{margin:0;font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg); color:var(--fg)}
-    a{color:var(--brand); text-underline-offset:.2em}
-    header.site{position:sticky;top:0;z-index:10;background:color-mix(in oklab, var(--bg), transparent 0%);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid #0003}
-    header .bar{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;padding:.5rem 1rem}
-    header nav a{margin-right:.75rem}
-    main{display:grid;grid-template-columns:260px 1fr; gap:1rem; padding:1rem}
-    nav#toc{position:sticky; top:3.2rem; align-self:start; max-height:calc(100dvh - 4rem); overflow:auto; border:1px solid #0002; border-radius:var(--radius); padding:.5rem}
-    nav#toc a{display:block;padding:.15rem .35rem;border-radius:8px}
-    nav#toc a:hover{background:#0001}
-    section{border:1px solid #0002; border-radius:var(--radius); padding:1rem; background:color-mix(in srgb, var(--bg), #fff 8%)}
-    h2{margin-top:0}
-    .grid{display:grid; gap:.75rem}
-    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    @media (max-width: 900px){ main{grid-template-columns:1fr} }
-    .box{border:1px dashed #0003; border-radius:10px; padding:.5rem}
-    figure{margin:0}
-    .pill{display:inline-block;padding:.2rem .5rem;border:1px solid #0002;border-radius:999px;background:#fff3}
-    .muted{color:var(--muted)}
-    .kbd{border:1px solid #0003;border-bottom-width:3px;border-radius:6px;padding:.1rem .35rem;background:linear-gradient(#fff,#eee)}
-    .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.6rem}
-    .card{border:1px solid #0002;border-radius:12px;padding:.75rem;background:#fff2}
-    .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
-    details{border:1px solid #0002; border-radius:10px; padding:.5rem .8rem; background:#fff2}
-    dialog{border:1px solid #0003;border-radius:12px;padding:1rem}
-    table{width:100%; border-collapse:collapse}
-    th, td{border:1px solid #0002; padding:.4rem .5rem; text-align:left}
-    caption{caption-side:top; font-weight:600; padding:.4rem}
-    .two-col{columns:280px; column-gap:1rem}
-    .two-col > *{break-inside:avoid}
-    .demo-iframe{width:100%; aspect-ratio:16/9; border:1px solid #0002; border-radius:12px}
+}
   </style>
 </head>
 <body>
