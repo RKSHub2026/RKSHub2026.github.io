@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Page</title>
+    <style>
+        /* Base Styles */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f4f7f6; color: #333; }
+        header { background: #2c3e50; color: #ffffff; padding: 40px 20px; text-align: center; border-bottom: 4px solid #18bc9c; }
+        header h1 { margin: 0; font-size: 2.5rem; }
+        
+        /* Layout */
+        .container { width: 85%; max-width: 1000px; margin: 30px auto; display: grid; gap: 20px; }
+        section { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h2 { color: #2c3e50; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px; margin-top: 0;}
+        
+        /* Lists */
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        
+        /* Gallery */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px; }
+        .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s ease; }
+        .gallery img:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <h1>Rahul Kumar Singh</h1>
+        <p>Computer Science Student | Tech Enthusiast</p>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I am a passionate student learning about software engineering, HTML, and CSS. I enjoy building structured web applications and learning new technologies.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>M.Tech in CSIS</strong> - IIIT Hyderabad (2026 - 2028)</li>
+                <li><strong>B.Tech in Electrical </strong> - IGIT Sarang (Graduated 2024)</li>
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <ul>
+                <li><strong>Frontend Intern</strong> at Tech Corp (Summer 2025) - Assisted in redesigning internal web tools.</li>
+                <li><strong>Open Source Contributor</strong> (Present) - Contributing to various GitHub repositories.</li>
+            </ul>
+        </section>
+
+        <section id="interests-hobbies">
+            <h2>Interests & Hobbies</h2>
+            <ul>
+                <li>Programming & UI/UX Design</li>
+                <li>Reading Non-Fiction Novels</li>
+                <li>Gaming and Movies</li>
+            </ul>
+        </section>
+
+        <section id="gallery">
+            <h2>Picture Gallery</h2>
+            <div class="gallery">
+                <!-- Replace src with your actual image links -->
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&q=80" alt="Coding Setup">
+                <img src="https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=400&q=80" alt="Photography Hobby">
+                <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?w=400&q=80" alt="Hiking Trip">
+            </div>
+        </section>
+    </div>
+</body>
+</html>
