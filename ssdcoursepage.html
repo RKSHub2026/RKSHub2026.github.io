@@ -47,81 +47,113 @@
     .two-col > *{break-inside:avoid}
     .demo-iframe{width:100%; aspect-ratio:16/9; border:1px solid #0002; border-radius:12px}
     
-    /* --- NEW CSS ELEMENTS: DARK THEME OVERRIDE --- */
+    /* --- NEW CSS ELEMENTS: CYBERPUNK THEME OVERRIDE --- */
     :root {
-        --bg: #0f1115 !important;
-        --fg: #e2e8f0 !important;
-        --muted: #94a3b8 !important;
-        --brand: #14b8a6 !important; /* Teal accent */
-        --radius: 12px !important;
+        --bg: #05050a !important; /* Deep space black */
+        --fg: #e0f8ff !important; /* Pale cyan text */
+        --muted: #6b7280 !important;
+        --brand: #00ffff !important; /* Neon Cyan */
+        --radius: 0px !important; /* Sharp edges for that digital feel */
     }
 
     body {
         background-color: var(--bg) !important;
         color: var(--fg) !important;
-        font-family: 'Inter', system-ui, -apple-system, sans-serif !important;
+        /* Hacker-style monospace font */
+        font-family: 'Courier New', Courier, monospace !important; 
+        /* Subtle digital grid background */
+        background-image: linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px) !important;
+        background-size: 20px 20px !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #ff003c !important; /* Neon Pink/Red */
+        text-transform: uppercase !important;
+        /* 3D glowing text effect */
+        text-shadow: 2px 2px 0px #00ffff, -1px -1px 8px rgba(255, 0, 60, 0.6) !important;
+        letter-spacing: 2px !important;
     }
 
     header.site {
-        background: rgba(15, 17, 21, 0.9) !important;
-        border-bottom: 1px solid #1e293b !important;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+        background: rgba(5, 5, 10, 0.95) !important;
+        border-bottom: 2px solid #ff003c !important;
+        box-shadow: 0 0 15px rgba(255, 0, 60, 0.4) !important;
     }
 
     nav#toc {
-        background-color: #1e293b !important;
-        border: 1px solid #334155 !important;
-        box-shadow: 2px 2px 12px rgba(0,0,0,0.3) !important;
+        background-color: #0a0a12 !important;
+        border: 1px solid #00ffff !important;
+        box-shadow: 4px 4px 0px #ff003c !important; /* Blocky retro shadow */
     }
 
     nav#toc a:hover {
-        background: rgba(20, 184, 166, 0.1) !important;
-        color: var(--brand) !important;
-        transform: translateX(4px);
-        transition: all 0.2s ease;
+        background: #00ffff !important;
+        color: #000 !important; /* Black text on hover */
+        font-weight: bold !important;
+        box-shadow: 0 0 12px #00ffff !important;
     }
 
     section {
-        background-color: #1e293b !important;
-        border: 1px solid #334155 !important;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
-        transition: transform 0.2s ease-in-out, border-color 0.2s;
+        background-color: rgba(10, 10, 15, 0.8) !important;
+        border: 1px solid #ff003c !important;
+        box-shadow: inset 0 0 10px rgba(255, 0, 60, 0.1), 0 0 10px rgba(0, 255, 255, 0.15) !important;
+        transition: all 0.2s ease-in-out;
     }
 
     section:hover {
-        transform: translateY(-2px);
-        border-color: rgba(20, 184, 166, 0.5) !important; /* Glow effect on section hover */
+        border-color: #fce205 !important; /* Cyberpunk Yellow on hover */
+        box-shadow: inset 0 0 15px rgba(252, 226, 5, 0.1), 0 0 15px rgba(252, 226, 5, 0.3) !important;
     }
 
     a {
         color: var(--brand) !important;
-        text-decoration: none !important;
+        text-shadow: 0 0 5px rgba(0, 255, 255, 0.4) !important;
     }
 
     a:hover {
-        text-decoration: underline !important;
-        text-shadow: 0 0 8px rgba(20, 184, 166, 0.4);
+        color: #ff003c !important;
+        text-shadow: 0 0 8px #ff003c !important;
     }
 
     .box, .card, details, dialog {
-        background-color: #0f1115 !important;
-        border-color: #334155 !important;
+        background-color: #05050a !important;
+        border: 1px solid #00ffff !important; 
+        box-shadow: 3px 3px 0px rgba(0, 255, 255, 0.3) !important;
     }
 
     table th {
-        background-color: #0f1115 !important;
-        color: var(--brand) !important;
-        border-color: #334155 !important;
+        background-color: #ff003c !important;
+        color: #fff !important;
+        border-color: #fce205 !important; /* Yellow borders */
+        text-shadow: none !important;
     }
 
     table td {
-        border-color: #334155 !important;
+        border-color: #ff003c !important;
+    }
+
+    button {
+        background: #fce205 !important; /* Yellow buttons */
+        color: #000 !important;
+        border: none !important;
+        border-radius: 0 !important;
+        font-weight: bold !important;
+        text-transform: uppercase !important;
+        box-shadow: 3px 3px 0px #ff003c !important;
+        cursor: pointer !important;
+    }
+
+    button:hover {
+        background: #00ffff !important;
+        box-shadow: 3px 3px 0px #fce205 !important;
     }
 
     .kbd {
-        background: #334155 !important;
-        color: #f8fafc !important;
-        border-color: #0f1115 !important;
+        background: #00ffff !important;
+        color: #000 !important;
+        border-color: #ff003c !important;
+        border-radius: 0 !important;
     }
   </style>
 </head>
